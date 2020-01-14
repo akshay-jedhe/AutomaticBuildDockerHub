@@ -1,9 +1,9 @@
 FROM alpine:3.11.2
 WORKDIR /app
 ARG TARGET
-ENV TARGET $TARGET
-RUN echo $TARGET > test.txt
+ENV SAMPLE $TARGET
+RUN echo $SAMPLE > test.txt
 RUN cat test.txt
-RUN echo $TARGET
+RUN echo $SAMPLE
 COPY greeting.txt .
 ENTRYPOINT ["cat","/app/greeting.txt"]
