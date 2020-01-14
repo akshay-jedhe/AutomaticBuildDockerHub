@@ -4,5 +4,6 @@ ARG TARGET
 ENV TARGET $TARGET
 RUN echo $TARGET > test.txt
 RUN cat test.txt
+RUN echo $TARGET
 COPY greeting.txt .
 ENTRYPOINT ["cat","/app/greeting.txt"]
